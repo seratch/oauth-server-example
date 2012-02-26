@@ -9,15 +9,13 @@ token = OAuth::AccessToken.new(consumer, 'TOKEN', 'TOKEN_SECRET')
 
 http = Net::HTTP.new('localhost', 8080)
 
-=begin
-# GET 401
+# GET expected 401
 req = Net::HTTP::Get.new('/')
 res = http.request(req)
 puts res.code
 puts res.body
-=end
 
-# GET 200
+# GET expected 200
 http = Net::HTTP.new('localhost', 8080)
 req = Net::HTTP::Get.new('/?foo=bar')
 req.oauth!(http, consumer, token)

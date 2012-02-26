@@ -28,7 +28,6 @@ res = http.request(req)
 puts res.code
 puts res.body
 
-
 # POST expected 400
 req = Net::HTTP::Post.new('/2legged/post/submit')
 req.set_form_data({:id => :foo})
