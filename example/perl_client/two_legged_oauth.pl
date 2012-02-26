@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 
-use Data::Dumper;
 use YAML;
 use OAuth::Lite;
 use OAuth::Lite::Consumer;
